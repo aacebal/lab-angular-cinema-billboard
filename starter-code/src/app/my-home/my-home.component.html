@@ -1,3 +1,4 @@
-<p>
-  my-home works!
-</p>
+<ul *ngFor="let movie of movies">
+  <li>{{ movie.title }}</li>
+  <li><a [routerLink]="['/movie', movie.id]"> Details </a></li>
+</ul>

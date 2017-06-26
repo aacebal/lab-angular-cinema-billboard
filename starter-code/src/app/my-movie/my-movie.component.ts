@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-my-movie',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyMovieComponent implements OnInit {
 
-  constructor() { }
+  movieId: string;
+
+  constructor(private myRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.myRoute.params.subscribe((paramsResult) => {
+      this.movieId = paramsResult['id'];
+    });
   }
 
 }

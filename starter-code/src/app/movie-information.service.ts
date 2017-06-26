@@ -102,7 +102,7 @@ export class MovieInformationService {
 
   getMovie(id) {
     this.movies.forEach((oneMovie) => {
-      if(oneMovie[0].id === id){
+      if(oneMovie["id"] === id){
         return oneMovie;
       }
       else return;
