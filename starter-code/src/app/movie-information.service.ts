@@ -100,14 +100,13 @@ export class MovieInformationService {
     return this.movies;
   }
 
-  getMovie(id) {
+  getMovie(id): any {
     this.movies.forEach((oneMovie) => {
-      if(oneMovie["id"] === id){
-        return oneMovie;
-      }
-      else return;
-    })
-  }
+        if(oneMovie['id'] === parseInt(id)){
+          return oneMovie;
+        }
+      })
+    }
 
   constructor() { }
 
