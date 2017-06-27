@@ -1,15 +1,35 @@
-<h2 >ROOM {{ myMovie.id }} </h2><h1 > {{ myMovie.title }}</h1>
+<div class="container">
 
-<img src={{myMovie.poster}} height="300px">
+    <h2 >ROOM {{ myMovie.id }} </h2><h1 > {{ myMovie.title }}</h1>
+  <div class="col-lg-4">
+    <img src={{myMovie.poster}} height="400px" width="300px;">
+  </div>
 
-<h3>Genres</h3>
-<p *ngFor="let genre of myMovie.genres">{{genre}}</p>
+<div class="col-lg-8">
 
-<h3>Year</h3>
-<p>{{ myMovie.year }}</p>
+  <div class="description">
+    <h3>Genres</h3>
+    <p *ngFor="let genre of myMovie.genres">{{genre}}</p>
+    <br>
+  </div>
 
-<h3>Actors</h3>
-<p>{{ myMovie.actors }}</p>
+  <div class="description">
+    <h3>Year</h3>
+    <p>{{ myMovie.year }}</p>
+    <br>
+  </div>
 
-<h3>Synopsis</h3>
-<p>{{ myMovie.synopsis }}</p>
+  <div class="description">
+    <h3>Actors</h3>
+    <p>{{ myMovie.actors }}</p>
+    <br>
+  </div>
+
+</div>
+
+<div class="col-lg-8">
+  <h3>Synopsis</h3>
+  <p>{{ myMovie.synopsis }}</p>
+</div>
+
+</div>
