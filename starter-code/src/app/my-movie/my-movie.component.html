@@ -1,39 +1,41 @@
 <div class="container">
-  <div class="">
-    <h2 >ROOM {{ myMovie.id }} </h2><h1> {{ myMovie.title }}</h1>
-  </div>
+
+  <h1 style="margin-left: 15px"><span style="font-size: 30px; color: grey">ROOM {{ myMovie.id }}</span> {{ myMovie.title }}</h1>
 
   <div class="col-lg-4">
-    <img src={{myMovie.poster}} height="350px" width="300px;">
+    <img src={{myMovie.poster}} height="400px" width="300px;">
   </div>
 
-<div class="col-lg-8">
-
-  <div class="description col-lg-4">
-    <h3>Genres</h3>
-      <p *ngFor="let genre of myMovie.genres">{{genre}}</p>
-      <br>
+  <div class="genres col-lg-8">
+    <div class="title col-lg-2">
+      <h3>Genres</h3>
+    </div>
+    <div class="title col-lg-2">
+    <p *ngFor="let genre of myMovie.genres">{{genre}}</p>
+    </div>
   </div>
 
-  <div class="description col-lg-4">
-    <h3>Year</h3>
-    <p>{{ myMovie.year }}</p>
-    <br>
+  <div class="genres col-lg-8">
+    <div class="title col-lg-2">
+  <h3>Year</h3>
+    </div>
+    <div class="title col-lg-2">
+  <p>{{ myMovie.year }}</p>
+    </div>
   </div>
 
-  <div class="description col-lg-4">
-    <h3>Actors</h3>
-    <p>{{ myMovie.actors }}</p>
-    <br>
+  <div class="genres col-lg-8">
+    <div class="title col-lg-2">
+  <h3>Actors</h3>
+    </div>
+    <div class="title col-lg-2">
+  <p *ngFor="let actor of myMovie.actors">{{ actor }}</p>
+    </div>
   </div>
 
-</div>
-
-<div class="col-lg-8">
   <h3>Synopsis</h3>
   <p>{{ myMovie.synopsis }}</p>
-</div>
 
-  <button (click)="takeMeHome()" class="btn btn-default" style="background-color: #217DB7; color: white; margin-left: 15px">Home</button>
+  <button (click)="takeMeHome()" class="btn btn-default" style="background-color: #217DB7; color: white">Home</button>
 
 </div>

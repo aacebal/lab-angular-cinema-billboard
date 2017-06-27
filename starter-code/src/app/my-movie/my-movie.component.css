@@ -1,17 +1,9 @@
-h1{
-  display: inline;
-}
-
-h2{
-  margin-top: 0px;
-  display: inline;
-}
-
 h3{
   margin-top: 0px;
 }
-
-.description{
-  float: left;
-  clear: both;
+div{
+  padding: 0px;
+}
+p{
+  margin-top: 5px;
 }
