@@ -9,19 +9,17 @@ import { MovieInformationService } from '../movie-information.service'
 })
 export class MyMovieComponent implements OnInit {
 
-  movies: Object[] = this.myService.movies;
+  constructor(private myRoute: ActivatedRoute, private myService: MovieInformationService) { }
 
   movieId: string;
-  myMovie: Object;
-
-
-  constructor(private myRoute: ActivatedRoute, private myService: MovieInformationService) { }
+  myMovie: any;
 
   ngOnInit() {
       this.myRoute.params.subscribe((paramsResult) => {
       this.movieId = paramsResult['id'];
-    });
+      });
 
-  this.myMovie = this.myService.getMovie(this.movieId);
+      this.myMovie = this.myService.getMovie(parseInt(this.movieId));
   }
+
 }

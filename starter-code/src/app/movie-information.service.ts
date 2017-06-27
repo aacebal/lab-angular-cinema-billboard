@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MovieInformationService {
 
+  myMovie: Object;
+
   movies: Object[] = [{
     id: 1,
     title: "The Shawshank Redemption",
@@ -100,13 +102,14 @@ export class MovieInformationService {
     return this.movies;
   }
 
-  getMovie(id): any {
+  getMovie(id): Object {
     this.movies.forEach((oneMovie) => {
-        if(oneMovie['id'] === parseInt(id)){
-          return oneMovie;
-        }
-      })
-    }
+      if (oneMovie['id'] === id) {
+        this.myMovie = oneMovie;
+      }
+    })
+    return this.myMovie;
+  }
 
   constructor() { }
 
